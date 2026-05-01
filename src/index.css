@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Tactical Color Palette */
+  --color-slate-950: #020617;
+  --color-slate-900: #0f172a;
+  --color-slate-800: #1e293b;
+  --color-slate-700: #334155;
+  --color-cyan-500: #06b6d4;
+  --color-cyan-400: #22d3ee;
+  --color-amber-500: #f59e0b;
+  --color-rose-500: #f43f5e;
+  --color-emerald-500: #10b981;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 font-sans selection:bg-cyan-500/30;
+    cursor: default;
+  }
+}
+
+@layer components {
+  .tactical-border {
+    @apply border border-slate-800/80;
+  }
+  
+  .glass-panel {
+    @apply bg-slate-900/40 backdrop-blur-md border border-white/5 shadow-2xl;
+  }
+
+  .mine-cell {
+    @apply w-11 h-11 flex items-center justify-center font-mono font-bold border border-slate-800/50 bg-slate-900/50 rounded-sm transition-all duration-300 relative overflow-hidden;
+  }
+  
+  .mine-cell.revealed {
+    @apply bg-slate-800/20 border-slate-700/30 shadow-inner;
+  }
+
+  /* Scanline animation */
+  .scanline {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(0deg, rgba(34, 211, 238, 0.05) 0%, transparent 100%);
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    pointer-events: none;
+    animation: scan 8s linear infinite;
+  }
+
+  @keyframes scan {
+    0% { bottom: 100%; }
+    100% { bottom: -100px; }
+  }
+
+  .terminal-text {
+    @apply font-mono text-[11px] leading-relaxed tracking-tight;
+  }
+}

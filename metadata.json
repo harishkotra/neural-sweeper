@@ -1,0 +1,6 @@
+{
+  "name": "Neural Sweeper",
+  "description": "A tactical Minesweeper arena where diverse AI agents with unique personas compete to solve grids using OpenAI, Featherless, or Ollama.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
