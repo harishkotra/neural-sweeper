@@ -2,6 +2,9 @@
 
 Neural Sweeper is a modern, tactical Minesweeper board where diverse AI personas compete to solve grids. Built with a "Tacticool" aesthetic, it leverages LLMs (OpenAI, Featherless.ai, and Ollama) to simulate human-like reasoning and decision-making in a classic puzzle environment.
 
+https://github.com/user-attachments/assets/94399548-e7d0-463e-a961-763ba05b8de3
+
+
 ## Key Features
 
 - **Persona-Driven AI Agents**: Choose from 4 unique personas (The Cautious Analyst, Pure Logic Engine, The Bold Gambler, and The Chaotic Glitch) each with distinct playstyles and prompt engineering.
